@@ -1,0 +1,138 @@
+:root {
+  --bg-primary: #f1f5f9;
+  --card-bg: #ffffff;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --primary-accent: #6366f1;
+  --primary-hover: #4f46e5;
+  --border-color: #e2e8f0;
+  --completed-color: #94a3b8;
+  --danger-color: #f43f5e;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 0;
+}
+
+.app-card {
+  width: 100%;
+  max-width: 540px;
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 32px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.app-header h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+
+#loadTasksBtn {
+  width: 100%;
+  background: var(--primary-accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+}
+
+#loadTasksBtn:hover {
+  background: var(--primary-hover);
+}
+
+#statusMessage {
+  min-height: 20px;
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: var(--primary-accent);
+  font-weight: 500;
+  text-align: center;
+}
+
+#taskList {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  background: #f8fafc;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+}
+
+.task span {
+  font-size: 0.95rem;
+  color: var(--text-main);
+  margin-right: 12px;
+}
+
+.task.completed {
+  background: #f1f5f9;
+}
+
+.task.completed span {
+  text-decoration: line-through;
+  color: var(--completed-color);
+}
+
+.button-group {
+  display: flex;
+  gap: 6px;
+}
+
+.btn-status {
+  background: #e0e7ff;
+  color: var(--primary-accent);
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.btn-remove {
+  background: #ffe4e6;
+  color: var(--danger-color);
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.btn-status:hover {
+  background: #c7d2fe;
+}
+
+.btn-remove:hover {
+  background: #fecdd3;
+}
