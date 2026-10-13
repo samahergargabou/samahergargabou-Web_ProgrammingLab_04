@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Task Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-card">
+    <header class="app-header">
+      <h2>Task Dashboard</h2>
+      <p class="subtitle">Organize and monitor weekly assignments</p>
+    </header>
+
+    <div class="control-panel">
+      <button id="loadTasksBtn" type="button">Fetch Tasks</button>
+      <p id="statusMessage" role="status"></p>
+    </div>
+
+    <section id="taskList" aria-live="polite"></section>
+  </main>
+
+  <script src="taskManager.js"></script>
+  <script src="api.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
